@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="mvp.b12.abdul.com.b12mvp.ui.splash.SplashActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="172dp" />
 </android.support.constraint.ConstraintLayout>
