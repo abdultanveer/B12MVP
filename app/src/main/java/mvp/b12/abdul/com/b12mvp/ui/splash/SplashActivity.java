@@ -15,5 +15,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        // tell presenter  that splash activity got created what should it do next
+        //presenter will tell the activity to show progress bar while i am fetching the data [2sec]
+        //presenter will tell the activity to start the mainactivity[login]
     }
 }
