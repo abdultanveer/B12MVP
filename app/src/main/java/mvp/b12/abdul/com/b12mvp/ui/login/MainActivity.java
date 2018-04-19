@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import mvp.b12.abdul.com.b12mvp.R;
@@ -17,12 +18,14 @@ import mvp.b12.abdul.com.b12mvp.data.db.model.Login;
 public class MainActivity extends AppCompatActivity implements IView {
     IPresenter iPresenter;
     EditText nameEdittext, passwordEdittext;
+    TextView dbTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         nameEdittext = findViewById(R.id.nameEditText);
         passwordEdittext = findViewById(R.id.passwordEditText);
+        dbTextView = findViewById(R.id.dbtextview);
 
         iPresenter = new Presenter(this);
     }
@@ -39,5 +42,10 @@ public class MainActivity extends AppCompatActivity implements IView {
     @Override
     public void showToast() {
         Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void setDbText(String data) {
+        dbTextView.setText(data);
     }
 }

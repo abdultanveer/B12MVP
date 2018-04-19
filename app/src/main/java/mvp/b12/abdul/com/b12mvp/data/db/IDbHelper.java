@@ -1,5 +1,7 @@
 package mvp.b12.abdul.com.b12mvp.data.db;
 
+import android.database.Cursor;
+
 import mvp.b12.abdul.com.b12mvp.data.db.model.Login;
 
 /**
@@ -12,8 +14,13 @@ public interface IDbHelper {
 
     void createRow(Login login);
 
-    public void readRow();
+    public void readRow(OnDataReceived onDataReceived);
     public void readAllRows();
     public void updateRow();
     public void deleteRow();
+
+    public interface OnDataReceived{
+        public void onSuccess(Cursor cursor);
+        public void onFailure();
+    }
 }

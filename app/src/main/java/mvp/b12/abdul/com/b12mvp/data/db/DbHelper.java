@@ -2,6 +2,7 @@ package mvp.b12.abdul.com.b12mvp.data.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -46,8 +47,12 @@ public class DbHelper implements IDbHelper {
     }
 
     @Override
-    public void readRow() {
-
+    public void readRow(OnDataReceived onDataReceived) {
+        Cursor cursor;
+        cursor =
+                database.query(LoginEntry.TABLE_NAME,null,null,
+                        null,null,null,null);
+                onDataReceived.onSuccess(cursor);
     }
 
     @Override

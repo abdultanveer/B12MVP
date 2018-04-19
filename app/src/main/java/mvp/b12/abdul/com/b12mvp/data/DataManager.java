@@ -29,7 +29,7 @@ public class DataManager implements IDataManager {
 
 
     @Override
-    public void readRow() {
+    public void readRow(OnDataReceived onDataReceived) {
 
     }
 

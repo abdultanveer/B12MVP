@@ -6,4 +6,5 @@ package mvp.b12.abdul.com.b12mvp.ui.login;
 
 public interface IView {
     public void showToast();
+    public void setDbText(String data);
 }
