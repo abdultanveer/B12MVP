@@ -23,7 +23,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + LoginEntry.TABLE_NAME;
 
-    public DbOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public DbOpenHelper(Context context) {
         super(context, "login", null, 1);
     }
 
