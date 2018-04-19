@@ -12,11 +12,13 @@ import mvp.b12.abdul.com.b12mvp.ui.login.MainActivity;
 public class SplashPresenter implements ISplashPresenter{
     @Override
     public void activityReady(Context mContext)  {
+        //show the progress bar
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        // hide the progressbar
         Intent  loginIntent = new Intent(mContext, MainActivity.class);
         mContext.startActivity(loginIntent);
     }

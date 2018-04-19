@@ -5,4 +5,6 @@ package mvp.b12.abdul.com.b12mvp.ui.splash;
  */
 
 public interface IView {
+    public void showLoading();
+    public void hideLoading();
 }
